@@ -1,1 +1,3 @@
-var belly_button_data = d3.json("https://kevinnmcpu.github.io/static/js/samples.json")
+d3.json(https://kevinnmcpu.github.io/samples.json).then(function(data) {
+    console.log(data);
+  });
