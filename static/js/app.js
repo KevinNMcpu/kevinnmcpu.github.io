@@ -1,4 +1,1 @@
-d3.json("https://kevinnmcpu.github.io/samples.json").then((data) => {
-    console.log(data)
-
-}
+var belly_button_data = d3.json("https://kevinnmcpu.github.io/static/js/samples.json")
