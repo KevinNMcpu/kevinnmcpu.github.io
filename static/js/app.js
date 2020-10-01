@@ -20,5 +20,5 @@ function updatePlotly() {
     //console.log(dataset);
     //value of dataset selected^
 
-    console.log(more_data.metadata);
+    console.log(more_data);
 };
