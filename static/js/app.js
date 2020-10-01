@@ -15,10 +15,16 @@ var more_data = d3.json("https://kevinnmcpu.github.io/samples.json");
 
 var biometric_data = more_data.metadata;
 
+function pull_meta_data(data)
+    {
+    var pulled_data = data.metadata;
+    }
+
 function updatePlotly() {
     var dataset = d3.select('select').property('value');
     //console.log(dataset);
     //value of dataset selected^
 
-    console.log(more_data.metadata);
+    var rtr_data = pull_meta_data(more_data);
+    console.log(rtr_data);
 };
