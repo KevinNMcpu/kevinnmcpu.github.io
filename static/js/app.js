@@ -13,8 +13,8 @@ d3.selectAll("#selDataset").on("change", updatePlotly);
 
 function updatePlotly() {
     var dropdownMenu = d3.select("#selDataset")
-    var dataset = dropdownMenu.attr("id")
-    console.log("You picked " + dataset.value)
+    var dataset = dropdownMenu.property("id")
+    console.log("You picked " + dataset)
 
 
 
