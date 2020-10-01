@@ -21,11 +21,12 @@ function updatePlotly() {
             function search(dataset, selected_id){
                 for (var i=0; I < selected_id; i++) {
                     if (selected_id[i].id === dataset){
-                        return selected_id[i]
-                        console.log(selected_id[i])
+                        return selected_id[i];
+                        console.log(selected_id[i]);
                     }
                 }
             }
+            search();
             //console.log(selected_id);
         });
 }
