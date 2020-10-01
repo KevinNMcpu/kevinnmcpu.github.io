@@ -20,5 +20,5 @@ function updatePlotly() {
     //console.log(dataset);
     //value of dataset selected^
 
-    console.log(biometric_data);
+    console.log(more_data.metadata);
 };
