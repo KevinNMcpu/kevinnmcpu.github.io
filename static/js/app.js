@@ -17,12 +17,13 @@ var metadata = more_data.metadata;
 
 function updatePlotly() {
     var dataset = d3.select('select').property('value');
-    //console.log(dataset);
+    console.log(dataset);
     //value of dataset selected^    
 
                 for (var i=0; i < metadata; i++) {
+                    console.log("running loop!")
                     if (metadata[i].id === dataset){
-                        return console.log(metadata[i]);
+                        console.log(metadata[i]);
                     }
                 }
             };
