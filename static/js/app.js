@@ -18,6 +18,14 @@ function updatePlotly() {
     
     d3.json("https://kevinnmcpu.github.io/samples.json").then(function(data2) {
             var selected_id = data2.metadata;
-            console.log(selected_id);
+            function search(dataset, selected_id){
+                for (var i=0; I < selected_id; i++) {
+                    if (selected_id[i].id === dataset){
+                        return selected_id[i]
+                        console.log(selected_id[i])
+                    }
+                }
+            }
+            //console.log(selected_id);
         });
 }
