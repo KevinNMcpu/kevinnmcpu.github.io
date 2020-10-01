@@ -13,14 +13,31 @@ d3.json("https://kevinnmcpu.github.io/samples.json").then(function(data) {
 
 d3.selectAll("#selDataset").on("change", updatePlotly);
 
-//var more_data = d3.json("https://kevinnmcpu.github.io/samples.json");
+function searchObj (obj, query) {
 
-//var metadata = more_data["metadata"];
+    for (var key in obj) {
+        var value = obj[key];
+
+        if (typeof value === 'object') {
+            searchObj(value, query);
+        }
+
+        if (value === query) {
+            console.log('property=' + key + ' value=' + value);
+        }
+
+    }
+
+}
 
 function updatePlotly() {
     var dataset = d3.select('select').property('value');
-    //console.log(dataset);
+    console.log(dataset);
     //value of dataset selected^
 
-    //console.log(meta_data);
+    d3.json("https://kevinnmcpu.github.io/samples.json").then(function(data) {
+        var meta_data = data.metadata;
+        searchObj(meta_data, dataset);
+    });
+
 };
