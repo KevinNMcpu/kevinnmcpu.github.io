@@ -2,6 +2,7 @@ var tbody = d3.select("tbody");
 
 d3.json("https://kevinnmcpu.github.io/samples.json").then(function(data) {
     var list_of_names = data.names;
+    var meta_data = data.metadata;
     list_of_names.forEach(function(name){
             var dropDown = d3.select("select");
             var options = dropDown.append("option");
@@ -11,14 +12,14 @@ d3.json("https://kevinnmcpu.github.io/samples.json").then(function(data) {
 
 d3.selectAll("#selDataset").on("change", updatePlotly);
 
-var more_data = d3.json("https://kevinnmcpu.github.io/samples.json");
+//var more_data = d3.json("https://kevinnmcpu.github.io/samples.json");
 
-var metadata = more_data["metadata"];
+//var metadata = more_data["metadata"];
 
 function updatePlotly() {
     var dataset = d3.select('select').property('value');
     //console.log(dataset);
     //value of dataset selected^
 
-    console.log(more_data);
+    console.log(meta_data);
 };
