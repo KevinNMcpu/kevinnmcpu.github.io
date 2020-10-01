@@ -1,10 +1,9 @@
 var tbody = d3.select("tbody");
 
-var meta_data = []
-
 d3.json("https://kevinnmcpu.github.io/samples.json").then(function(data) {
     var list_of_names = data.names;
     var meta_data = data.metadata;
+    console.log(meta_data);
     list_of_names.forEach(function(name){
             var dropDown = d3.select("select");
             var options = dropDown.append("option");
@@ -23,5 +22,5 @@ function updatePlotly() {
     //console.log(dataset);
     //value of dataset selected^
 
-    console.log(meta_data);
+    //console.log(meta_data);
 };
