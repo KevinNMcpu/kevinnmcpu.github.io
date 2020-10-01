@@ -16,5 +16,8 @@ function updatePlotly() {
     //console.log(dataset);
     //value of dataset selected^
     
-    console.log(d3.json("https://kevinnmcpu.github.io/samples.json"))
+    d3.json("https://kevinnmcpu.github.io/samples.json").then(function(data2) {
+            var selected_id = data2.metadata;
+            console.log(selected_id);
+        });
 }
