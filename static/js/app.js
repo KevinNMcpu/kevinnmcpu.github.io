@@ -15,17 +15,10 @@ var more_data = d3.json("https://kevinnmcpu.github.io/samples.json");
 
 var biometric_data = more_data.metadata;
 
-// function search(nameKey, myArray){
-//     for (var i=0 ; i < Object.keys(myArray).length ; i++) {
-//         if (myArray.id[i]== nameKey) {
-//             return myArray[i]
-//         }
-//     }
-// }
-
 function updatePlotly() {
     var dataset = d3.select('select').property('value');
-    console.log(dataset);
-    //value of dataset selected^    
-    //console.log(search(dataset, biometric_data));
+    //console.log(dataset);
+    //value of dataset selected^
+
+    console.log(biometric_data);
 };
