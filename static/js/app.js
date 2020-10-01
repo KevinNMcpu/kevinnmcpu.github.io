@@ -1,5 +1,7 @@
 var tbody = d3.select("tbody");
 
+var meta_data = []
+
 d3.json("https://kevinnmcpu.github.io/samples.json").then(function(data) {
     var list_of_names = data.names;
     var meta_data = data.metadata;
