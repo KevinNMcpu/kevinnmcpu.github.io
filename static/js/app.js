@@ -17,7 +17,7 @@ var biometric_data = more_data.metadata;
 
 function search(nameKey, myArray){
     var results = [];
-    for (var i=0 ; i < myArray.id.length ; i++) {
+    for (var i=0 ; i < Object.keys(myArray).length ; i++) {
         if (myArray.id[i]== nameKey) {
             return myArray[i]
         }
