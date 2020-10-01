@@ -18,6 +18,7 @@ var biometric_data = more_data.metadata;
 function pull_meta_data(data)
     {
     var pulled_data = data.metadata;
+    return pulled_data;
     }
 
 function updatePlotly() {
