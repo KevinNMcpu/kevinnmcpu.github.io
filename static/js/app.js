@@ -12,12 +12,9 @@ d3.json("https://kevinnmcpu.github.io/samples.json").then(function(data) {
 d3.selectAll("#selDataset").on("change", updatePlotly);
 
 function updatePlotly() {
-    //var dropdownMenu = d3.select("#selDataset");
     var dataset = d3.select('select').property('value');
-    //var dataset = dropdownMenu.property("id");
-    //console.log("You picked " + dataset)
-    console.log(dataset);
-
-
-
+    //console.log(dataset);
+    //value of dataset selected^
+    
+    console.log(d3.json("https://kevinnmcpu.github.io/samples.json"))
 }
