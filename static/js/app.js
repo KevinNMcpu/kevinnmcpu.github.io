@@ -15,7 +15,7 @@ function updatePlotly() {
     var dropdownMenu = d3.select("#selDataset");
     var dataset = dropdownMenu.property("id");
     //console.log("You picked " + dataset)
-    console.log(dataset);
+    console.log(dropdownMenu);
 
 
 
