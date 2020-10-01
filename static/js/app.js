@@ -11,13 +11,12 @@ d3.json("https://kevinnmcpu.github.io/samples.json").then(function(data) {
 
 d3.selectAll("#selDataset").on("change", updatePlotly);
 
+var array_of_ids = d3.json("https://kevinnmcpu.github.io/samples.json")
+
 function updatePlotly() {
     var dataset = d3.select('select').property('value');
     //console.log(dataset);
-    //value of dataset selected^
-    
-    d3.json("https://kevinnmcpu.github.io/samples.json").then(function(data2) {
-            var selected_id = data2.metadata;
+    //value of dataset selected^    
             function search(dataset, selected_id){
                 for (var i=0; i < selected_id; i++) {
                     if (selected_id[i].id === dataset){
@@ -26,7 +25,4 @@ function updatePlotly() {
                     }
                 }
             }
-            search();
-            //console.log(selected_id);
-        });
-}
+        };
