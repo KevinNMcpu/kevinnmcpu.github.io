@@ -6,7 +6,4 @@ d3.json("https://kevinnmcpu.github.io/samples.json").then(function(data) {
 
 var tbody = d3.select("tbody");
 
-list_of_names.forEach(function(name)
-    {
-        console.log(name);
-    })
+list_of_names.forEach(function(name) => console.log(name));
