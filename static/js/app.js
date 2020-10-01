@@ -16,7 +16,7 @@ var more_data = d3.json("https://kevinnmcpu.github.io/samples.json");
 var biometric_data = more_data.metadata;
 
 function search(nameKey, myArray){
-    for (var i=0; i < myArray.length; i++) {
+    for (var i=0; i < 1000000; i++) {
         if (myArray[i].name === nameKey) {
             return myArray[i];
         }
