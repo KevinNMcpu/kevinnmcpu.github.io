@@ -17,12 +17,12 @@ function updatePlotly() {
     var dataset = d3.select('select').property('value');
     //console.log(dataset);
     //value of dataset selected^    
+
             function search(dataset, selected_id){
                 for (var i=0; i < selected_id; i++) {
                     if (selected_id[i].id === dataset){
-                        return selected_id[i];
-                        console.log(selected_id[i]);
+                        return console.log(selected_id[i]);
                     }
                 }
             }
-        };
+                };
