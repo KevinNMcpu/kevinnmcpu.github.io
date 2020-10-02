@@ -66,6 +66,8 @@ function updatePlotly() {
         }
       };
 
+      var bubdata = [bubblegraph];
+
     // var bubblegraph = {
     //     x: samples.otu_ids,
     //     y: samples.sample_values,
@@ -79,7 +81,7 @@ function updatePlotly() {
 
 
       Plotly.newPlot('bar', bargraph);
-      Plotly.newPlot('bubble', bubblegraph);
+      Plotly.newPlot('bubble', bubdata);
 
       
 
