@@ -12,6 +12,7 @@ d3.json("https://kevinnmcpu.github.io/samples.json").then(function(data) {
   
 
 d3.selectAll("#selDataset").on("change", updatePlotly);
+var dataset = d3.select('select').property('value');
 
 function getKeyByValue(object, value) {
     console.log(object);
@@ -25,7 +26,6 @@ function getKeyByValue(object, value) {
 }
 
 function updatePlotly() {
-    var dataset = d3.select('select').property('value');
     console.log(dataset);
     //value of dataset selected^
 
