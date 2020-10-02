@@ -18,12 +18,12 @@ function searchObj (obj, query) {
     for (var key in obj) {
         var value = obj[key];
 
-        if (typeof value === 'object') {
-            searchObj(value, query);
-        }
+        // if (typeof value === 'object') {
+        //     searchObj(value, query);
+        // }
 
         if (value === query) {
-            console.log('property=' + key + ' value=' + value);
+            console.log(obj[key]);
         }
 
     }
