@@ -3,7 +3,8 @@ var tbody = d3.select("tbody");
 d3.json("https://kevinnmcpu.github.io/samples.json").then(function(data) {
     var list_of_names = data.names;
     var meta_data = data.metadata;
-    console.log(meta_data);
+    var samples = data.samples;
+    //console.log(meta_data);
     list_of_names.forEach(function(name){
             var dropDown = d3.select("select");
             var options = dropDown.append("option");
@@ -24,8 +25,8 @@ function updatePlotly() {
 
     for (var i = 0; i < meta_data.length; i++) {
         if (meta_data[i].id == dataset) {
-             console.log("DING DING DING DING Found it!");
-             console.log(meta_data[i]);
+             //console.log("DING DING DING DING Found it!");
+             //console.log(meta_data[i]);
              d3.select("#id").text(meta_data[i].id)
              d3.select("#ethnicity").text(meta_data[i].ethnicity)
              d3.select("#gender").text(meta_data[i].gender)
@@ -35,6 +36,21 @@ function updatePlotly() {
              d3.select("#wfreq").text(meta_data[i].wfreq)
         }
     }
+
+    for (var i = 0, i < samples.length; i++) {
+        if (samples[i].id == dataset) {
+            console.log("Ding ding, found it!");
+            console.log(samples[i]);
+        }
+    }
+
+    // var bargraph = [{
+    //     type: 'bar',
+    //     x: [20, 14, 23],
+    //     y: ['giraffes', 'orangutans', 'monkeys'],
+    //     orientation: 'h'
+    //   }];
+      
 
 };
 
