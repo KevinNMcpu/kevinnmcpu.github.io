@@ -47,8 +47,10 @@ function updatePlotly() {
 
     var bargraph = [{
         type: 'bar',
-        x: samples[x].sample_values.slice(0,10),
-        y: samples[x].sample_ids,
+        x: samples[x].sample_values.slice(0,10).sort(function(a,b){
+            return a-b
+        }),
+        y: "OTU " + samples[x].sample_ids,
         text: samples[x].otu_labels,
         orientation: 'h'
       }];
