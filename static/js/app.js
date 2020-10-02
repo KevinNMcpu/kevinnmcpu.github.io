@@ -26,20 +26,10 @@ function updatePlotly() {
         if (meta_data[i].id == dataset) {
              console.log("DING DING DING DING Found it!");
              console.log(meta_data[i]);
+             d3.select("#sample-metadata").text("New");
         }
     }
 
 };
-
-// function getKeyByValue(object, value) {
-//     console.log(object);
-//     console.log(value);
-//     for (var i = 0; i < object.length; i++) {
-//         if (object[i].id == dataset) {
-//             console.log("DING DING DING DING Found it!");
-//             return object[i];
-//         }
-//     }
-// }
 
 });
