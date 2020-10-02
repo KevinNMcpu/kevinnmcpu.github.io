@@ -49,6 +49,7 @@ function updatePlotly() {
         type: 'bar',
         x: samples[x].sample_values,
         y: samples[x].sample_ids,
+        text: samples[x].otu_labels,
         orientation: 'h'
       }];
 
