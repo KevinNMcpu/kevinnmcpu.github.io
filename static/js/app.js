@@ -13,20 +13,6 @@ d3.json("https://kevinnmcpu.github.io/samples.json").then(function(data) {
 
 d3.selectAll("#selDataset").on("change", updatePlotly);
 
-function searchObj (obj, query) {
-
-    for (var key in obj) {
-        console.log("running for loop")
-        var value = obj.id[key];
-
-        if (value === query) {
-            console.log(obj[key]);
-        }
-
-    }
-
-}
-
 function updatePlotly() {
     var dataset = d3.select('select').property('value');
     console.log(dataset);
@@ -34,10 +20,13 @@ function updatePlotly() {
 
     console.log("running second json obj");
     var meta_data = data.metadata;
-    searchObj(meta_data, dataset);
 
-    //var meta_data = data.metadata;
-    //searchObj(meta_data, dataset);
+    var i = 0
+
+    while (i > 200) {
+        console.log(meta_data.id);
+        i++;
+    }
 
 };
 });
