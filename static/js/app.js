@@ -23,8 +23,11 @@ function updatePlotly() {
 
     var i = 0
 
-    while (i > 200) {
-        console.log(meta_data.id);
+    while (i => 152) {
+        console.log("running a loop");
+        if (meta_data[i].id === metascore) {
+            console.log(meta_data[i]);
+        }
         i++;
     }
 
