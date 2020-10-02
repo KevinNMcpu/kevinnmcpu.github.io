@@ -19,10 +19,10 @@ function getKeyByValue(object, value) {
     console.log(value);
     for (var i = 0; i < object.length; i++) {
         if (object[i].id == dataset) {
-            console.log("DING DING DING DINGFound it!");
+            console.log("DING DING DING DING Found it!");
+            return object[i];
         }
     }
-    return Object.keys(object).find(key => object[key === value]);
 }
 
 function updatePlotly() {
