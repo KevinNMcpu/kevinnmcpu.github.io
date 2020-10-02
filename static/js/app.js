@@ -36,6 +36,7 @@ function updatePlotly() {
     //value of dataset selected^
 
     d3.json("https://kevinnmcpu.github.io/samples.json").then(function(data) {
+        console.log("running second json obj");
         var meta_data = data.metadata;
         searchObj(meta_data, dataset);
     });
