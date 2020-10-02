@@ -25,7 +25,7 @@ function updatePlotly() {
 
     while (i => 152) {
         console.log("running a loop");
-        if (meta_data[i].id === dataset) {
+        if (meta_data.id[i] === dataset) {
             console.log(meta_data[i]);
         }
         i++;
