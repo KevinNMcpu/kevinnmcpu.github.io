@@ -16,6 +16,11 @@ d3.selectAll("#selDataset").on("change", updatePlotly);
 function getKeyByValue(object, value) {
     console.log(object);
     console.log(value);
+    for (var i = 0; i < object.length; i++) {
+        if (object[i].id == dataset) {
+            console.log("DING DING DING DINGFound it!");
+        }
+    }
     return Object.keys(object).find(key => object[key === value]);
 }
 
@@ -25,8 +30,6 @@ function updatePlotly() {
     //value of dataset selected^
 
     var meta_data = data.metadata;
-
-    var i = 0
 
     // console.log(meta_data);
     
