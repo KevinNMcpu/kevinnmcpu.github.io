@@ -17,7 +17,7 @@ function searchObj (obj, query) {
 
     for (var key in obj) {
         console.log("running for loop")
-        var value = obj[key];
+        var value = obj.id[key];
 
         if (value === query) {
             console.log(obj[key]);
