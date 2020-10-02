@@ -23,13 +23,19 @@ function updatePlotly() {
 
     var i = 0
 
-    while (i => 152) {
-        console.log("running a loop");
-        if (meta_data.id[i] === dataset) {
-            console.log(meta_data[i]);
+    for (var key in meta_data) {
+        if (meta_data.hasOwnProperty(key)) {
+            console.log(key + " -> " + meta_data[key]);
         }
-        i++;
     }
+
+    // while (i => 152) {
+    //     console.log("running a loop");
+    //     if (meta_data.id[i] === dataset) {
+    //         console.log(meta_data[i]);
+    //     }
+    //     i++;
+    // }
 
 };
 });
