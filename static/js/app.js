@@ -14,6 +14,8 @@ d3.json("https://kevinnmcpu.github.io/samples.json").then(function(data) {
 d3.selectAll("#selDataset").on("change", updatePlotly);
 
 function getKeyByValue(object, value) {
+    console.log(object);
+    console.log(value);
     return Object.keys(object).find(key => object[key === value]);
 }
 
