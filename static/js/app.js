@@ -9,18 +9,15 @@ d3.json("https://kevinnmcpu.github.io/samples.json").then(function(data) {
             var options = dropDown.append("option");
             options.text(name).attr("id",name);
         });
-  });
+  
 
 d3.selectAll("#selDataset").on("change", updatePlotly);
 
 function searchObj (obj, query) {
 
     for (var key in obj) {
+        console.log("running for loop")
         var value = obj[key];
-
-        // if (typeof value === 'object') {
-        //     searchObj(value, query);
-        // }
 
         if (value === query) {
             console.log(obj[key]);
@@ -35,13 +32,12 @@ function updatePlotly() {
     console.log(dataset);
     //value of dataset selected^
 
-    // d3.json("https://kevinnmcpu.github.io/samples.json").then(function(data) {
-    //     console.log("running second json obj");
-    //     var meta_data = data.metadata;
-    //     searchObj(meta_data, dataset);
-    // });
-
+    console.log("running second json obj");
     var meta_data = data.metadata;
     searchObj(meta_data, dataset);
 
+    //var meta_data = data.metadata;
+    //searchObj(meta_data, dataset);
+
 };
+});
