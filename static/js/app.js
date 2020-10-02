@@ -18,16 +18,18 @@ function updatePlotly() {
     console.log(dataset);
     //value of dataset selected^
 
-    console.log("running second json obj");
     var meta_data = data.metadata;
 
     var i = 0
 
-    for (var key in meta_data) {
-        if (meta_data.hasOwnProperty(key)) {
-            console.log(key + " -> " + meta_data[key]);
-        }
-    }
+    console.log(meta_data);
+
+    // for (var key in meta_data) {
+    //     if (meta_data.hasOwnProperty(key)) {
+    //         console.log(key + " -> " + meta_data[key]);
+    //     }
+    // }
+    //meta_data[key]
 
     // while (i => 152) {
     //     console.log("running a loop");
