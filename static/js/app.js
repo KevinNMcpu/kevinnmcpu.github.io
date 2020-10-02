@@ -26,7 +26,7 @@ function updatePlotly() {
         if (meta_data[i].id == dataset) {
              console.log("DING DING DING DING Found it!");
              console.log(meta_data[i]);
-             d3.select("#sample-metadata").text("id: " + meta_data[i].id + "<br>" + "ethnicity: " + meta_data[i].ethnicity + "<br>" + "gender:" + meta_data[i].gender + "<br>" + "location:" + meta_data[i].location + "<br>" + "bbtype: " + meta_data[i].bbtype + "wfreq: " + meta_data[i].wfreq);
+             d3.select("#sample-metadata").text("id: " + meta_data[i].id).html("<br>").text("ethnicity: " + meta_data[i].ethnicity + "<br>" + "gender:" + meta_data[i].gender + "<br>" + "location:" + meta_data[i].location + "<br>" + "bbtype: " + meta_data[i].bbtype + "wfreq: " + meta_data[i].wfreq);
         }
     }
 
