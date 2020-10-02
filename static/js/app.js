@@ -56,6 +56,7 @@ function updatePlotly() {
       }];
 
       var bubblegraph = {
+        type: 'bubble',
         x: samples[x].otu_ids,
         y: samples[x].sample_values,
         text: samples[x].otu_labels,
