@@ -22,10 +22,10 @@ function updatePlotly() {
 
     var meta_data = data.metadata;
 
-    for (var i = 0; i < object.length; i++) {
-        if (object[i].id == dataset) {
+    for (var i = 0; i < meta_data.length; i++) {
+        if (meta_data[i].id == dataset) {
              console.log("DING DING DING DING Found it!");
-             console.log(object[i]);
+             console.log(meta_data[i]);
         }
     }
 
