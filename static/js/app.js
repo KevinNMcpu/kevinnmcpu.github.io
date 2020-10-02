@@ -56,7 +56,7 @@ function updatePlotly() {
       }];
 
       var bubblegraph = {
-        x: samples[x].otu_ids.map(d => `OTU ${d}`),
+        x: samples[x].otu_ids,
         y: samples[x].sample_values,
         text: samples[x].otu_labels,
         mode: 'markers',
