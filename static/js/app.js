@@ -58,12 +58,12 @@ function updatePlotly() {
       var bubblegraph = {
         x: samples[x].otu_ids.map(d => `OTU ${d}`),
         y: samples[x].sample_values,
-        //text: ['A<br>size: 40', 'B<br>size: 60', 'C<br>size: 80', 'D<br>size: 100'],
-        //mode: 'markers',
-        //marker: {
-        //  color: ['rgb(93, 164, 214)', 'rgb(255, 144, 14)',  'rgb(44, 160, 101)', 'rgb(255, 65, 54)'],
-        //  size: [40, 60, 80, 100]
-        //}
+        text: samples[x].otu_labels,
+        mode: 'markers',
+        marker: {
+          color: samples[x].otu_id,
+          size: samples[x].sample_values
+        }
       };
 
       Plotly.newPlot('bar', bargraph);
