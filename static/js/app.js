@@ -55,28 +55,28 @@ function updatePlotly() {
         orientation: 'h'
       }];
 
-    //   var bubblegraph = {
-    //     x: samples[x].otu_ids,
-    //     y: samples[x].sample_values,
-    //     text: samples[x].otu_labels,
-    //     mode: 'markers',
-    //     marker: {
-    //       color: samples[x].otu_id,
-    //       size: samples[x].sample_values
-    //     }
-    //   };
-
-
-    var bubblegraph = {
-        x: samples.otu_ids,
-        y: samples.sample_values,
-        text: samples.otu_labels,
+      var bubblegraph = {
+        x: samples[x].otu_ids,
+        y: samples[x].sample_values,
+        text: samples[x].otu_labels,
         mode: 'markers',
         marker: {
-          color: samples.otu_id,
-          size: samples.sample_values
+          color: samples[x].otu_id,
+          size: samples[x].sample_values
         }
       };
+
+
+    // var bubblegraph = {
+    //     x: samples.otu_ids,
+    //     y: samples.sample_values,
+    //     text: samples.otu_labels,
+    //     mode: 'markers',
+    //     marker: {
+    //       color: samples.otu_id,
+    //       size: samples.sample_values
+    //     }
+    //   };
 
     var bubdata = [bubblegraph];
 
