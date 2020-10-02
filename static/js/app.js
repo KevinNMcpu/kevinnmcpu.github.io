@@ -50,7 +50,7 @@ function updatePlotly() {
         x: samples[x].sample_values.slice(0,10).sort(function(a,b){
             return a-b
         }),
-        y: "OTU " + samples[x].otu_ids,
+        y: samples[x].otu_ids,
         text: samples[x].otu_labels,
         orientation: 'h'
       }];
