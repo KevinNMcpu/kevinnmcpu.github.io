@@ -62,7 +62,8 @@ function updatePlotly() {
         mode: 'markers',
         marker: {
           color: samples[x].otu_id,
-          size: samples[x].sample_values
+          size: samples[x].sample_values,
+          colorscale: [[0, 'rgb(255,40,0)'], [3000, 'rgb(127,0,255)']]
         }
       };
 
