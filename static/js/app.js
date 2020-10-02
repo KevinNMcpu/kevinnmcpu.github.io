@@ -26,6 +26,7 @@ function getKeyByValue(object, value) {
 }
 
 function updatePlotly() {
+    var dataset = d3.select('select').property('value');
     console.log(dataset);
     //value of dataset selected^
 
