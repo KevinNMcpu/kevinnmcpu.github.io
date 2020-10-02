@@ -37,7 +37,7 @@ function updatePlotly() {
         }
     }
 
-    for (var i = 0, i < samples.length; i++) {
+    for (var i = 0; i < samples.length; i++) {
         if (samples[i].id == dataset) {
             console.log("Ding ding, found it!");
             console.log(samples[i]);
