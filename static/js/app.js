@@ -22,21 +22,24 @@ function updatePlotly() {
 
     var meta_data = data.metadata;
 
-    // console.log(meta_data);
-    
-    console.log(getKeyByValue(meta_data, dataset));
+    for (var i = 0; i < object.length; i++) {
+        if (object[i].id == dataset) {
+             console.log("DING DING DING DING Found it!");
+             console.log(object[i]);
+        }
+    }
 
 };
 
-function getKeyByValue(object, value) {
-    console.log(object);
-    console.log(value);
-    for (var i = 0; i < object.length; i++) {
-        if (object[i].id == dataset) {
-            console.log("DING DING DING DING Found it!");
-            return object[i];
-        }
-    }
-}
+// function getKeyByValue(object, value) {
+//     console.log(object);
+//     console.log(value);
+//     for (var i = 0; i < object.length; i++) {
+//         if (object[i].id == dataset) {
+//             console.log("DING DING DING DING Found it!");
+//             return object[i];
+//         }
+//     }
+// }
 
 });
