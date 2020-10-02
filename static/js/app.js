@@ -41,15 +41,19 @@ function updatePlotly() {
         if (samples[i].id == dataset) {
             console.log("Ding ding, found it!");
             console.log(samples[i]);
+            var x = i;
         }
     }
 
-    // var bargraph = [{
-    //     type: 'bar',
-    //     x: [20, 14, 23],
-    //     y: ['giraffes', 'orangutans', 'monkeys'],
-    //     orientation: 'h'
-    //   }];
+    var bargraph = [{
+        type: 'bar',
+        x: samples[x].sample_values,
+        y: samples[x].sample_ids,
+        orientation: 'h'
+      }];
+
+      Plotly.newPlot('bar', bargraph);
+
       
 
 };
